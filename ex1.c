@@ -50,6 +50,6 @@ int main(){
         printf("Salario: %.2f\n", colaboradores[i].salario);  
         printf("Data de nascimento: %d/%s/%d\n", colaboradores[i].dtNasc.dia, colaboradores[i].dtNasc.mes, colaboradores[i].dtNasc.ano);
     }
-
+ 
     return 0;
 }
