@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+int mdc(int a, int b);
+
 int main(){
 
     int a, b;
