@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Definição da estrutura do nó
 typedef struct No {
     int valor;
     struct No *prox;
 } no;
 
-// Protótipos das funções
 no *inserir_inicio(no *head, int valor);
 no *inserir_final(no *head, int valor);
 void imprimir_lista(no *head);
 
 int main() {
-    no *head = NULL; // Inicializa a lista vazia
+    no *head = NULL;
     int menu = 1;
 
     while (menu) {
@@ -47,7 +45,6 @@ int main() {
     return 0;
 }
 
-// Função para inserir no início
 no *inserir_inicio(no *head, int valor) {
     no *novo = (no*)malloc(sizeof(no));
     if (novo == NULL) {
@@ -56,10 +53,9 @@ no *inserir_inicio(no *head, int valor) {
     }
     novo->valor = valor;
     novo->prox = head;
-    return novo; // Retorna o novo head
+    return novo;
 }
 
-// Função para inserir no final
 no *inserir_final(no *head, int valor) {
     no *novo = (no*)malloc(sizeof(no));
     if (novo == NULL) {
@@ -69,7 +65,7 @@ no *inserir_final(no *head, int valor) {
     novo->valor = valor;
     novo->prox = NULL;
 
-    if (head == NULL) { // Se a lista estiver vazia, retorna o novo nó como head
+    if (head == NULL) {
         return novo;
     }
 
@@ -81,7 +77,6 @@ no *inserir_final(no *head, int valor) {
     return head;
 }
 
-// Função para imprimir a lista
 void imprimir_lista(no *head) {
     no *temp = head;
     while (temp != NULL) {
